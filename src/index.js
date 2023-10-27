@@ -14,13 +14,11 @@ const depo = createStore(reducers, applyMiddleware(logger, thunk));
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <ToastContainer>
-    <Provider store={depo}>
-      <BrowserRouter>
-        <>
-          <App />
-        </>
-      </BrowserRouter>
-    </Provider>
-  </ToastContainer>
+  <Provider store={depo}>
+    <BrowserRouter>
+      <>
+        <App />
+      </>
+    </BrowserRouter>
+  </Provider>
 );
