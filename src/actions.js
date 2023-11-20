@@ -20,7 +20,7 @@ export const notEkleAPI = (yeniNot) => (dispatch) => {
     .then((res) => {
       console.log("cevap", res);
       if (res.status === 200) {
-        dispatch(notEkle(res.data.json));
+        dispatch(notEkle(res.data.data));
       }
     })
     .catch((error) => console.log(error));
